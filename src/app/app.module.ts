@@ -1,11 +1,12 @@
 import { LOCALE_ID, NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { SharedModule } from './shared/shared.module';
 import { AppRouterModule } from './app-router.module';
+import { RouterModule } from '@angular/router';
 import { SalesModule } from './sales/sales.module';
+import { SharedModule } from './shared/shared.module';
 
 // Cambiar el locale de la app
 
@@ -22,6 +23,7 @@ registerLocaleData(localFr)
   imports: [
     BrowserModule,
     RouterModule,
+    BrowserAnimationsModule,
     AppRouterModule,
     SharedModule,
     SalesModule
