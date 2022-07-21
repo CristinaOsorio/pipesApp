@@ -9,7 +9,7 @@ import { SalesModule } from './sales/sales.module';
 
 // Cambiar el locale de la app
 
-import localEs from '@angular/common/locales/es';
+import localEs from '@angular/common/locales/es-Mx';
 import localFr from '@angular/common/locales/fr';
 import { registerLocaleData } from '@angular/common';
 registerLocaleData(localEs)
@@ -27,7 +27,7 @@ registerLocaleData(localFr)
     SalesModule
   ],
   providers: [
-    {provide: LOCALE_ID, useValue: 'es' }
+    {provide: LOCALE_ID, useValue: 'es-Mx' }
   ],
   bootstrap: [AppComponent]
 })
