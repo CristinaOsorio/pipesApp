@@ -8,6 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BasicComponent implements OnInit {
 
+  titleLower: string = "makry";
+  titleUpper: string = "MAKRY";
+  titleComplete: string = "maKrY oZ";
+
+  current: Date = new Date();
+
+
   constructor() { }
 
   ngOnInit(): void {
