@@ -8,6 +8,7 @@ import { NoCommonsComponent } from './pages/no-commons/no-commons.component';
 import { BasicComponent } from './pages/basic/basic.component';
 import { SortComponent } from './pages/sort/sort.component';
 import { ToUppercasePipe } from './pipes/to-uppercase.pipe';
+import { IsActiveProductPipe } from './pipes/is-active-product.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ToUppercasePipe } from './pipes/to-uppercase.pipe';
     NoCommonsComponent,
     BasicComponent,
     SortComponent,
-    ToUppercasePipe
+    ToUppercasePipe,
+    IsActiveProductPipe
   ],
   imports: [
     CommonModule,
