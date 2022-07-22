@@ -57,8 +57,25 @@ export class NoCommonsComponent {
   persona = {
     nombre: 'Makry',
       edad:35,
-      direccion: 'Benito Juarez, Hidalgo'
-    
+      direccion: 'Benito Juarez, Hidalgo' 
   }
+
+  //JsonPipe
+  heroes= [
+    {
+      name: 'Superman', 
+      canFly: true
+    },
+    {
+      name: 'Robin', 
+      canFly: false
+    },
+    {
+      name: 'Aquaman', 
+      canFly: false
+    },
+    
+  ]
+
 
 }
