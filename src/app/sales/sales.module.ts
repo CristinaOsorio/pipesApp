@@ -7,15 +7,15 @@ import { NumberComponent } from './pages/number/number.component';
 import { NoCommonsComponent } from './pages/no-commons/no-commons.component';
 import { BasicComponent } from './pages/basic/basic.component';
 import { SortComponent } from './pages/sort/sort.component';
-
-
+import { ToUppercasePipe } from './pipes/to-uppercase.pipe';
 
 @NgModule({
   declarations: [
     NumberComponent,
     NoCommonsComponent,
     BasicComponent,
-    SortComponent
+    SortComponent,
+    ToUppercasePipe
   ],
   imports: [
     CommonModule,

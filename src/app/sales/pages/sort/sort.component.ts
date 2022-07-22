@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-sort',
@@ -6,11 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styles: [
   ]
 })
-export class SortComponent implements OnInit {
+export class SortComponent {
+  isUppercase = true;
+  products: any[]= [];
 
-  constructor() { }
+  word: string = 'desaRRollador'
 
-  ngOnInit(): void {
-  }
+    changeWord() {
+      this.isUppercase = !this.isUppercase;
+    }
 
 }

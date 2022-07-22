@@ -13,20 +13,24 @@ import { SharedModule } from './shared/shared.module';
 import localEs from '@angular/common/locales/es-Mx';
 import localFr from '@angular/common/locales/fr';
 import { registerLocaleData } from '@angular/common';
+
+import { ScrollingModule } from '@angular/cdk/scrolling';
+
 registerLocaleData(localEs)
 registerLocaleData(localFr)
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ], 
   imports: [
     BrowserModule,
     RouterModule,
     BrowserAnimationsModule,
     AppRouterModule,
+    ScrollingModule,
     SharedModule,
-    SalesModule
+    SalesModule,
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'es-Mx' }
