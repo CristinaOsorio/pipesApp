@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-no-commons',
@@ -27,8 +28,6 @@ export class NoCommonsComponent {
     '=1': ' se tiene ha un cliente',
     'other': ' se tiene # clientes',
   }
-
-  icon: string = 'pi pi-trash';
 
   changePerson(): void {
     this.gener =  this.gener == 'F' ? 'M' : 'F';
@@ -74,8 +73,16 @@ export class NoCommonsComponent {
       name: 'Aquaman', 
       canFly: false
     },
-    
-  ]
+  ];
+
+  // Async Pipe
+  myObservable = interval(5000);
+
+  valuePromise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('Datos de la promesa');
+    }, 3500);
+  });
 
 
 }
