@@ -53,4 +53,12 @@ export class NoCommonsComponent {
     ];
   }
 
+  // KeyValue Pipe
+  persona = {
+    nombre: 'Makry',
+      edad:35,
+      direccion: 'Benito Juarez, Hidalgo'
+    
+  }
+
 }
