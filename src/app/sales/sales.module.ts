@@ -9,6 +9,7 @@ import { BasicComponent } from './pages/basic/basic.component';
 import { SortComponent } from './pages/sort/sort.component';
 import { ToUppercasePipe } from './pipes/to-uppercase.pipe';
 import { IsActiveProductPipe } from './pipes/is-active-product.pipe';
+import { SortPipe } from './pipes/sort.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { IsActiveProductPipe } from './pipes/is-active-product.pipe';
     BasicComponent,
     SortComponent,
     ToUppercasePipe,
-    IsActiveProductPipe
+    IsActiveProductPipe,
+    SortPipe
   ],
   imports: [
     CommonModule,

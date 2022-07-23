@@ -9,22 +9,24 @@
 
 	<div class="p-toolbar-group-right">
 		<button pButton label="Toggle Mayuscula" icon="pi pi-sort-alt" class="m-1" (click)="changeWord()"></button>
-		<button pButton icon="pi pi-sort" label="Por nombre" class="m-1 p-button-warning"></button>
-		<button pButton icon="pi pi-sort" label="Valores" class="m-1 p-button-success"></button>
-		<button pButton icon="pi pi-sort" label="Por color" class="m-1 p-button-help"></button>
+		<button pButton icon="pi pi-sort" label="Por Código" class="m-1 p-button-help" (click)="changeOrderBy('code')"></button>
+		<button pButton icon="pi pi-sort" label="Por Nombre" class="m-1 p-button-danger" (click)="changeOrderBy('name')"></button>
+		<button pButton icon="pi pi-sort" label="Por Categoría" class="m-1 p-button-success" (click)="changeOrderBy('category')"></button>
+		<button pButton icon="pi pi-sort" label="Por Precio" class="m-1 p-button-info" (click)="changeOrderBy('quantity')"></button>
+		<button pButton icon="pi pi-sort" label="Por Estado" class="m-1 p-button-warning" (click)="changeOrderBy('isActive')"></button>
 	</div>
 </p-toolbar>
 
 <div class="grip">
 	<div class="p-col mt-2">
-		<p-table [value]="products" responsiveLayout="scroll">
+		<p-table [value]="products | sort: orderBy : direction " responsiveLayout="scroll">
 			<ng-template pTemplate="header">
 				<tr>
-					<th>Codigo</th>
+					<th>Código</th>
 					<th>Nombre</th>
-					<th>Categoria</th>
+					<th>Categoría</th>
 					<th>Precio</th>
-					<th>¿Esta Activo?</th>
+					<th>Estado</th>
 				</tr>	
 			</ng-template>
 			<ng-template pTemplate="body" let-product>

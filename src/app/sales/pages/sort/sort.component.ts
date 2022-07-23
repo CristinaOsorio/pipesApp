@@ -10,6 +10,8 @@ import { Product, Category } from '../../interfaces/product.interfaces';
 export class SortComponent {
   isUppercase = true;
   word: string = 'desaRRollador';
+  orderBy: keyof Product | null = null;
+  direction: 'asc' | 'desc' = 'asc';
 
   products: Product[]= [
     {
@@ -20,8 +22,8 @@ export class SortComponent {
       quantity: 1200,
     },
     {
-      code: 'prod_2',
-      name: 'Colares',
+      code: 'prod_4',
+      name: 'Pantalon',
       category: Category.accesorios,
       isActive: false,
       quantity: 200,
@@ -34,7 +36,7 @@ export class SortComponent {
       quantity: 500,
     },
     {
-      code: 'prod_4',
+      code: 'prod_2',
       name: 'Pulseras',
       category: Category.accesorios,
       isActive: true,
@@ -42,7 +44,7 @@ export class SortComponent {
     },
     {
       code: 'prod_5',
-      name: 'Pantalon',
+      name: 'Colares',
       category: Category.ropa,
       isActive: true,
       quantity: 900,
@@ -52,6 +54,11 @@ export class SortComponent {
 
     changeWord() {
       this.isUppercase = !this.isUppercase;
+    }
+
+    changeOrderBy(orderBy: keyof Product | null) {
+      this.orderBy = orderBy;
+      this.direction = this.direction === 'desc' ? 'asc' : 'desc';
     }
 
 }
