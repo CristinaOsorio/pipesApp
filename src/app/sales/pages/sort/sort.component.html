@@ -17,6 +17,11 @@
 	</div>
 </p-toolbar>
 
+<div class="text-layout">
+	<h2>Productos ordenados</h2>
+	<p>por medio de un pipe personalizado.</p>
+</div>
+
 <div class="grip">
 	<div class="p-col mt-2">
 		<p-table [value]="products | sort: orderBy : direction " responsiveLayout="scroll">
@@ -27,6 +32,38 @@
 					<th>Categoría</th>
 					<th>Precio</th>
 					<th>Estado</th>
+				</tr>	
+			</ng-template>
+			<ng-template pTemplate="body" let-product>
+				<tr>
+					<td>{{ product.code }}</td>
+					<td>{{ product.name }}</td>
+					<td>{{ product.category }}</td>
+					<td>{{ product.quantity }}</td>
+					<td>{{ product.isActive | isActive | titlecase }}</td>
+				</tr>
+			</ng-template>
+		</p-table>
+	</div>
+</div>
+
+<hr />
+
+<div class="text-layout">
+	<h2>Productos ordenados</h2>
+	<p>por medio de la propiedad de la table NGPrime.</p>
+</div>
+
+<div class="grip">
+	<div class="p-col mt-2">
+		<p-table [value]="products" responsiveLayout="scroll">
+			<ng-template pTemplate="header">
+				<tr>
+					<th pSortableColumn="code"> <p-sortIcon field="code"></p-sortIcon>Código</th>
+					<th pSortableColumn="name"> <p-sortIcon field="name"></p-sortIcon>Nombre</th>
+					<th pSortableColumn="category"> <p-sortIcon field="category"></p-sortIcon>Categoría</th>
+					<th pSortableColumn="quantity"> <p-sortIcon field="quantity"></p-sortIcon>Precio</th>
+					<th pSortableColumn="isActive"> <p-sortIcon field="isActive"></p-sortIcon>Estado</th>
 				</tr>	
 			</ng-template>
 			<ng-template pTemplate="body" let-product>
